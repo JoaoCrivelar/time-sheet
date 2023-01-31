@@ -1,11 +1,13 @@
+import { defaultTheme } from '@/styles/theme/default';
 import type { AppProps } from 'next/app'
-import GlobalStyle from '../styles/global'
+import { ThemeProvider } from 'styled-components'
+import {GlobalStyle} from '../styles/global'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <GlobalStyle /> 
-      <Component {...pageProps} />  
-    </>
-  )
+    <ThemeProvider theme={defaultTheme}>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
