@@ -8,3 +8,14 @@ export const Container = styled.div`
   flex-direction: column;
   padding:4rem 0;
 `;
+
+export const IndicatorStack = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap:1rem;
+  margin-top: 2.8rem;
+  margin-bottom: 6.1rem;
+`
